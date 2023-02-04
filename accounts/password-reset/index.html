@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Chat |  Reset Password </title>
+
+    <link rel="shortcut icon" type="image/jpg" href="../../static/favicon/favicon.jpg"/>
+    
+
+<link href="../../static/css/tailwind.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+</head>
+<body>
+    
+
+
+
+
+
+
+
+<style>
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+</style>
+
+<nav class="bg-white shadow-lg">
+    <div class="max-w-6xl mx-auto px-4">
+        <div class="flex justify-between">
+            <div class="flex space-x-7">
+                <div>
+                    <a href="../../index.html" class="flex items-center py-4 px-2">
+                        <i class="fas fa-comment"></i>
+                        <span class="font-semibold text-gray-500 text-lg px-2">Chat</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-1">
+
+                </div>
+            </div>
+
+
+            <div class="hidden md:flex items-center space-x-3 ">
+                <a href="../../index.html"
+                    class="py-4 px-2 text-green-500  font-semibold hover:text-green-500 transition duration-300 ">
+                    Home
+                </a>
+                <a href="../../chat/index.html"
+                    class="py-4 px-2 text-green-500  font-semibold hover:text-green-500 transition duration-300 ">
+                    Chat
+                </a>
+                <a href="../../about/index.html"
+                    class="py-4 px-2 text-green-500  font-semibold hover:text-green-500 transition duration-300 ">
+                    About
+                </a>
+                <a href="../../contact-us/index.html"
+                    class="py-4 px-2 text-green-500  font-semibold hover:text-green-500 transition duration-300 ">
+                    Contact Us
+                </a>
+                
+                <a href="../login-view/index.html"
+                    class="py-2 px-2 font-medium text-gray-500 rounded hover:bg-green-500 hover:text-white transition duration-300">
+                    Sign In
+                </a>
+                <a href="../register-user/index.html"
+                    class="py-2 px-2 font-medium text-white bg-green-500 rounded hover:bg-green-400 transition duration-300">
+                    Sign Up
+                </a>
+                
+            </div>
+
+            <div class="md:hidden flex items-center">
+                <button class="outline-none mobile-menu-button">
+                    <svg class=" w-6 h-6 text-gray-500 hover:text-green-500 " x-show="!showMenu" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="hidden mobile-menu">
+        <center>
+            <ul>
+                <li><a href="../../index.html"
+                        class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300 ">Home</a>
+                </li>
+                <li><a href="../../chat/index.html"
+                        class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300 ">Chat</a>
+                </li>
+                <li><a href="../../about/index.html"
+                        class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300 ">About</a>
+                </li>
+                <li><a href="../../contact-us/index.html"
+                        class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300 ">Contact
+                        Us</a>
+                </li>
+                
+                <li><a href="../login-view/index.html"
+                        class="block bg-green-200 text-sm px-2 py-4 hover:bg-green-500 transition duration-300 ">Sign
+                        In</a>
+                </li>
+                <li><a href="../register-user/index.html"
+                        class="block bg-green-200 text-sm px-2 py-4 hover:bg-green-500 transition duration-300 ">Sign
+                        Up</a>
+                </li>
+                
+            </ul>
+        </center>
+    </div>
+
+    <script>
+        const btn = document.querySelector("button.mobile-menu-button")
+        const menu = document.querySelector(".mobile-menu")
+        const mobile_button = document.getElementById('logout-mobile-button')
+
+        function alert_function() {
+            var confirm = window.confirm('Are You Sure you want to Logout?')
+            if (confirm) {
+                location.href = '/accounts/logout-user/'
+            }
+        }
+        btn.addEventListener("click", function () {
+            menu.classList.toggle("hidden")
+        })
+        var logout_button = document.getElementById('logout')
+        logout_button.addEventListener('click', function () {
+            var confirm = window.confirm('Are You Sure you want to Logout?')
+            if (confirm) {
+                location.href = '/accounts/logout-user/'
+            }
+        })
+    </script>
+</nav>
+    
+
+    <div class="flex min-h-screen bg-white">
+        <div class="w-1/2 bg-cover md:block hidden"
+             style="background-image:  url('https://images.unsplash.com/photo-1520243947988-b7b79f7873e9?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDd8fGJsYWNrJTIwZm9yZXN0fGVufDB8fDB8eWVsbG93&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60')">
+        </div>
+        <div class="md:w-1/2 max-w-lg mx-auto my-24 px-4 py-5 shadow-none">
+            <div class="text-left p-0 font-sans">
+                <h1 class=" text-gray-800 text-3xl font-medium">Forgot your password?</h1>
+                <h3 class="p-1 text-gray-700">
+                    Enter your email address below, and we'll email instructions for setting a new one.
+                </h3>
+
+            </div>
+            <div class="mt-10">
+                <form method="POST">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="6cCl0FNu2MOTnhcafugHhTH4N6FMKLuKZcN5lkBUqfPMlyrbX3cb9TaxBMXmDI7n">
+                    <tr><th></th><td><input type="email" name="email" class="block w-full p-2 border rounded border-gray-300 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:border-transparent" placeholder="Enter you Registered Email ..." required id="id_email"></td></tr>
+                    <div class="mt-10">
+                        <input type="submit" value="Send me the Instructions"
+                               class="py-3 bg-green-500 text-white w-full rounded hover:bg-green-600">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('id_email').focus()
+    </script>
+
+
+    
+
+<script src="../../static/js/index.min.js"></script>
+
+</body>
+</html>
