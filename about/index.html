@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Chat |  About Us </title>
+
+    <link rel="shortcut icon" type="image/jpg" href="../static/favicon/favicon.jpg"/>
+    
+
+<link href="../static/css/tailwind.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+</head>
+<body>
+    
+
+
+
+
+
+
+
+<style>
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+</style>
+
+<nav class="bg-white shadow-lg">
+    <div class="max-w-6xl mx-auto px-4">
+        <div class="flex justify-between">
+            <div class="flex space-x-7">
+                <div>
+                    <a href="../index.html" class="flex items-center py-4 px-2">
+                        <i class="fas fa-comment"></i>
+                        <span class="font-semibold text-gray-500 text-lg px-2">Chat</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-1">
+
+                </div>
+            </div>
+
+
+            <div class="hidden md:flex items-center space-x-3 ">
+                <a href="../index.html"
+                    class="py-4 px-2 text-green-500  font-semibold hover:text-green-500 transition duration-300 ">
+                    Home
+                </a>
+                <a href="../chat/index.html"
+                    class="py-4 px-2 text-green-500  font-semibold hover:text-green-500 transition duration-300 ">
+                    Chat
+                </a>
+                <a href="index.html"
+                    class="py-4 px-2 text-green-500  border-b-4 border-green-500 font-semibold ">
+                    About
+                </a>
+                <a href="../contact-us/index.html"
+                    class="py-4 px-2 text-green-500  font-semibold hover:text-green-500 transition duration-300 ">
+                    Contact Us
+                </a>
+                
+                <a href="../accounts/login-view/index.html"
+                    class="py-2 px-2 font-medium text-gray-500 rounded hover:bg-green-500 hover:text-white transition duration-300">
+                    Sign In
+                </a>
+                <a href="../accounts/register-user/index.html"
+                    class="py-2 px-2 font-medium text-white bg-green-500 rounded hover:bg-green-400 transition duration-300">
+                    Sign Up
+                </a>
+                
+            </div>
+
+            <div class="md:hidden flex items-center">
+                <button class="outline-none mobile-menu-button">
+                    <svg class=" w-6 h-6 text-gray-500 hover:text-green-500 " x-show="!showMenu" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="hidden mobile-menu">
+        <center>
+            <ul>
+                <li><a href="../index.html"
+                        class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300 ">Home</a>
+                </li>
+                <li><a href="../chat/index.html"
+                        class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300 ">Chat</a>
+                </li>
+                <li><a href="index.html"
+                        class="block text-sm px-2 py-4 text-white bg-green-500 font-semibold ">About</a>
+                </li>
+                <li><a href="../contact-us/index.html"
+                        class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300 ">Contact
+                        Us</a>
+                </li>
+                
+                <li><a href="../accounts/login-view/index.html"
+                        class="block bg-green-200 text-sm px-2 py-4 hover:bg-green-500 transition duration-300 ">Sign
+                        In</a>
+                </li>
+                <li><a href="../accounts/register-user/index.html"
+                        class="block bg-green-200 text-sm px-2 py-4 hover:bg-green-500 transition duration-300 ">Sign
+                        Up</a>
+                </li>
+                
+            </ul>
+        </center>
+    </div>
+
+    <script>
+        const btn = document.querySelector("button.mobile-menu-button")
+        const menu = document.querySelector(".mobile-menu")
+        const mobile_button = document.getElementById('logout-mobile-button')
+
+        function alert_function() {
+            var confirm = window.confirm('Are You Sure you want to Logout?')
+            if (confirm) {
+                location.href = '/accounts/logout-user/'
+            }
+        }
+        btn.addEventListener("click", function () {
+            menu.classList.toggle("hidden")
+        })
+        var logout_button = document.getElementById('logout')
+        logout_button.addEventListener('click', function () {
+            var confirm = window.confirm('Are You Sure you want to Logout?')
+            if (confirm) {
+                location.href = '/accounts/logout-user/'
+            }
+        })
+    </script>
+</nav>
+    
+
+    <div class="container mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 h-screen">
+            <div class="max-h-96 md:h-screen">
+                <img class="w-screen h-screen object-cover object-top"
+                     src="https://images.pexels.com/photos/270373/pexels-photo-270373.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940">
+            </div>
+            <div class="flex bg-gray-100 p-10">
+                <div class="mb-auto mt-auto max-w-lg">
+                    <a href="http://arvind11.ml" target="_blank">
+                        <h1 class="text-3xl uppercase">Arvind</h1>
+                    </a>
+                    <a href="http://arvind11.ml" target="_blank">
+                        <p class="font-semibold mb-5">Web Developer</p>
+                    </a>
+                    <p>I am a ECE Student from SRM with a strong interest in Problem-Solving and Software Development. I
+                        enjoy learning about new technologies. My goal is not only to adopt it and evolve with it but
+                        also contribute to the awesome changes that technology brings to our life! that's why I
+                        Code!</p>
+                    <a href="mailto:lordarvindthegamer@gmail.com">
+                        <button class="bg-black rounded-md py-3 px-7 mt-6 text-white">Say Hello!</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+<script src="../static/js/index.min.js"></script>
+
+</body>
+</html>
