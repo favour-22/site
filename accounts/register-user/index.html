@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Chat |  Sign Up </title>
+
+    <link rel="shortcut icon" type="image/jpg" href="../../static/favicon/favicon.jpg"/>
+    
+
+<link href="../../static/css/tailwind.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+</head>
+<body>
+    
+
+
+
+
+
+
+
+<style>
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+</style>
+
+<nav class="bg-white shadow-lg">
+    <div class="max-w-6xl mx-auto px-4">
+        <div class="flex justify-between">
+            <div class="flex space-x-7">
+                <div>
+                    <a href="../../index.html" class="flex items-center py-4 px-2">
+                        <i class="fas fa-comment"></i>
+                        <span class="font-semibold text-gray-500 text-lg px-2">Chat</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-1">
+
+                </div>
+            </div>
+
+
+            <div class="hidden md:flex items-center space-x-3 ">
+                <a href="../../index.html"
+                    class="py-4 px-2 text-green-500  font-semibold hover:text-green-500 transition duration-300 ">
+                    Home
+                </a>
+                <a href="../../chat/index.html"
+                    class="py-4 px-2 text-green-500  font-semibold hover:text-green-500 transition duration-300 ">
+                    Chat
+                </a>
+                <a href="../../about/index.html"
+                    class="py-4 px-2 text-green-500  font-semibold hover:text-green-500 transition duration-300 ">
+                    About
+                </a>
+                <a href="../../contact-us/index.html"
+                    class="py-4 px-2 text-green-500  font-semibold hover:text-green-500 transition duration-300 ">
+                    Contact Us
+                </a>
+                
+                <a href="../login-view/index.html"
+                    class="py-2 px-2 font-medium text-gray-500 rounded hover:bg-green-500 hover:text-white transition duration-300">
+                    Sign In
+                </a>
+                <a href="index.html"
+                    class="py-2 px-2 font-medium text-white bg-green-500 rounded hover:bg-green-400 transition duration-300">
+                    Sign Up
+                </a>
+                
+            </div>
+
+            <div class="md:hidden flex items-center">
+                <button class="outline-none mobile-menu-button">
+                    <svg class=" w-6 h-6 text-gray-500 hover:text-green-500 " x-show="!showMenu" fill="none"
+                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="hidden mobile-menu">
+        <center>
+            <ul>
+                <li><a href="../../index.html"
+                        class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300 ">Home</a>
+                </li>
+                <li><a href="../../chat/index.html"
+                        class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300 ">Chat</a>
+                </li>
+                <li><a href="../../about/index.html"
+                        class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300 ">About</a>
+                </li>
+                <li><a href="../../contact-us/index.html"
+                        class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300 ">Contact
+                        Us</a>
+                </li>
+                
+                <li><a href="../login-view/index.html"
+                        class="block bg-green-200 text-sm px-2 py-4 hover:bg-green-500 transition duration-300 ">Sign
+                        In</a>
+                </li>
+                <li><a href="index.html"
+                        class="block text-sm px-2 py-4 text-white bg-green-500 font-semibold ">Sign
+                        Up</a>
+                </li>
+                
+            </ul>
+        </center>
+    </div>
+
+    <script>
+        const btn = document.querySelector("button.mobile-menu-button")
+        const menu = document.querySelector(".mobile-menu")
+        const mobile_button = document.getElementById('logout-mobile-button')
+
+        function alert_function() {
+            var confirm = window.confirm('Are You Sure you want to Logout?')
+            if (confirm) {
+                location.href = '/accounts/logout-user/'
+            }
+        }
+        btn.addEventListener("click", function () {
+            menu.classList.toggle("hidden")
+        })
+        var logout_button = document.getElementById('logout')
+        logout_button.addEventListener('click', function () {
+            var confirm = window.confirm('Are You Sure you want to Logout?')
+            if (confirm) {
+                location.href = '/accounts/logout-user/'
+            }
+        })
+    </script>
+</nav>
+    
+
+        <section class="min-h-screen flex flex-col">
+        <div class="flex flex-1 items-center justify-center">
+            <div class="rounded-lg sm:border-2 px-4 lg:px-24 py-16 lg:max-w-xl sm:max-w-md w-full text-center">
+                <form class="text-center" method="POST">
+                    <input type="hidden" name="csrfmiddlewaretoken" value="XQBLHYLaGzNlQxTidvDfVTMd1GUGJlrQQQMv2DzA42OeOO8jV4zJNTfGPmcgCi4t">
+                    <h1 class="font-bold tracking-wider text-3xl mb-8 w-full text-gray-600">
+                        Register Here!
+                    </h1>
+                    <div class="py-2 text-left">
+                        
+                            <input type="text" name="username" class="bg-gray-200 border-2 border-gray-100 focus:outline-none bg-gray-100 block w-full py-2 px-4 rounded-lg focus:border-gray-700" placeholder="Enter your Username..." maxlength="20" minlength="8" required id="id_username"><br>
+                            
+                        
+                            <input type="email" name="email" class="bg-gray-200 border-2 border-gray-100 focus:outline-none bg-gray-100 block w-full py-2 px-4 rounded-lg focus:border-gray-700" placeholder="Enter your Email..." required id="id_email"><br>
+                            
+                        
+                            <input type="password" name="password1" class="bg-gray-200 border-2 border-gray-100 focus:outline-none bg-gray-100 block w-full py-2 px-4 rounded-lg focus:border-gray-700" placeholder="Enter a Password..." maxlength="20" minlength="8" required id="id_password1"><br>
+                            
+                        
+                            <input type="password" name="password2" class="bg-gray-200 border-2 border-gray-100 focus:outline-none bg-gray-100 block w-full py-2 px-4 rounded-lg focus:border-gray-700" placeholder="Re-Enter your Password..." maxlength="20" minlength="8" required id="id_password2"><br>
+                            
+                        
+                    </div>
+                    <div class="text-center">
+                        <label class="inline-flex items-center mt-3">
+                            <input type="checkbox" id="show-register" onclick="password_open()"
+                                   class="form-checkbox h-4 w-4 text-gray-600">
+                            <span class="ml-2 text-gray-700">Show Password</span>
+                        </label>
+                    </div>
+                    <div class="py-2">
+                        <button type="submit"
+                                class="border-2 border-gray-100 focus:outline-none bg-purple-600 text-white font-bold tracking-wider block w-full p-2 rounded-lg focus:border-gray-700 hover:bg-purple-700">
+                            Register
+                        </button>
+                    </div>
+                </form>
+
+
+
+                <div class="text-center mt-12">
+                    <span>
+                        Already have an Account?
+                    </span>
+                    <a href="../login-view/index.html"
+                       class="font-light text-md text-indigo-600 underline font-semibold hover:text-indigo-800">
+                        Sign In Here!</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<script>
+
+    document.getElementById('id_username').focus()
+    var password1 = document.getElementById('id_password1')
+    var password2 = document.getElementById('id_password2')
+    var check_box_register = document.getElementById('show-register')
+
+    function password_open() {
+        if (check_box_register.checked) {
+            password1.type = 'text'
+            password2.type = 'text'
+        }
+        else {
+            password1.type = 'password'
+            password2.type = 'password'
+        }
+    }
+
+</script>
+
+
+
+
+    
+
+<script src="../../static/js/index.min.js"></script>
+
+</body>
+</html>
